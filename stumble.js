@@ -1,7 +1,7 @@
 const chalk = require("chalk");
 const figlet = require("figlet");
 const inquirer = require("inquirer");
-const request = require("@i-scrapper/plugins-request");
+const request = require("@Zexxy/plugins-request");
 
 const questions = [
     {
@@ -62,7 +62,7 @@ const questions = [
     }
 ];
 
-const asciiText = figlet.textSync("Zexxy kontol", {
+const asciiText = figlet.textSync("Sc Zexxy", {
     font: 'Graffiti',
     horizontalLayout: 'default',
     verticalLayout: 'default',
@@ -86,7 +86,7 @@ function iStumble(interval, round, authorization) {
             } else if (typeof data == "object") {
                 const date = new Date();
                 let { Id, Username, Country, Region, Crowns, SkillRating } = data.User;
-                const print = `[${color(date.getHours())}:${date.getMinutes()}] ` + [color(Id, "greenBright"), color(Username), color(Country, "cyan"), color(Region, "blueBright"), color(Crowns, "cyanBright"), color(SkillRating, "greenBright")].join(" | ");
+                const print = `[${color(date.getHours())}:${date.getMinutes()}] ` + [color(Id, "blueBright"), color(Username), color(Country, "blueBrigt"), color(Region, "blueBright"), color(Crowns, "grayBright"), color(SkillRating, "blueBright")].join(" | ");
                 console.log(print);
             }
         } catch (error) {}
@@ -105,7 +105,7 @@ function stageRequest(authorization, round) {
                 Authorization: JSON.stringify(authorization),
                 use_response_compression: true,
                 "Accept-Encoding": "gzip",
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64))",
+                "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X6511B Build/RP1A.201005.001)",
             }
         })
             .then((response) => {
