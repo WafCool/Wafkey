@@ -62,7 +62,7 @@ const questions = [
     }
 ];
 
-const asciiText = figlet.textSync("Sc Zexxy", {
+const asciiText = figlet.textSync("WAFKEY", {
     font: 'Graffiti',
     horizontalLayout: 'default',
     verticalLayout: 'default',
@@ -86,7 +86,7 @@ function iStumble(interval, round, authorization) {
             } else if (typeof data == "object") {
                 const date = new Date();
                 let { Id, Username, Country, Region, Crowns, SkillRating } = data.User;
-                const print = `[${color(date.getHours())}:${date.getMinutes()}] ` + [color(Id, "blueBright"), color(Username), color(Country, "blueBrigt"), color(Region, "blueBright"), color(Crowns, "grayBright"), color(SkillRating, "blueBright")].join(" | ");
+                const print = `[${color(date.getHours())}:${date.getMinutes()}] ` + [color(Id, "cyanBright"), color(Username), color(Country, "white"), color(Region, "blueBright"), color(Crowns, "cyanBright"), color(SkillRating, "greenBright")].join(" | ");
                 console.log(print);
             }
         } catch (error) {}
@@ -94,7 +94,7 @@ function iStumble(interval, round, authorization) {
 }
 
 function color(text, color) {
-    return color ? chalk[color].bold(text) : chalk.white.bold(text);
+    return color ? chalk[color].bold(text) : chalk.blue.bold(text);
 }
 
 function stageRequest(authorization, round) {
@@ -105,7 +105,7 @@ function stageRequest(authorization, round) {
                 Authorization: JSON.stringify(authorization),
                 use_response_compression: true,
                 "Accept-Encoding": "gzip",
-                "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X6511B Build/RP1A.201005.001)",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64))",
             }
         })
             .then((response) => {
