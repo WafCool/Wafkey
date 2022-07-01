@@ -1,7 +1,7 @@
 const chalk = require("chalk");
 const figlet = require("figlet");
 const inquirer = require("inquirer");
-const request = require("@Zexxy/plugins-request");
+const request = require("@i-scrapper/plugins-request");
 
 const questions = [
     {
